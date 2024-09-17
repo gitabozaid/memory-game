@@ -1,0 +1,169 @@
+@keyframes fade-in-fwd {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.layout {
+  background-color: #152938;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  padding-top: 80px;
+  padding-bottom: 116px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 548px;
+  padding: 0 24px;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 766px;
+    padding: 0 56px;
+  }
+}
+
+.h1 {
+  img {
+    width: 122px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 45px;
+
+    @media only screen and (min-width: 768px) {
+      width: revert;
+      margin-bottom: 78px;
+    }
+  }
+
+  span {
+    position: absolute;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+.section {
+  perspective: 1500px;
+
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  padding: 24px;
+  height: 478px;
+
+  @media only screen and (min-width: 768px) {
+    border-radius: 20px;
+    padding: 56px;
+    height: 690px;
+  }
+}
+
+.container {
+  animation: fade-in-fwd 0.5s 0.1s both;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 24px;
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+
+  p {
+    color: #7191a5;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 11px;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 11px;
+
+    @media only screen and (min-width: 768px) {
+      column-gap: 30px;
+    }
+
+    button {
+      width: 100%;
+      height: 40px;
+
+      border: none;
+      border-radius: 26px;
+      background-color: #bcced9;
+
+      color: #fcfcfc;
+      font-size: 16px;
+      font-weight: 700;
+
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #6395b8;
+      }
+
+      @media only screen and (min-width: 768px) {
+        font-size: 26px;
+        height: 52px;
+      }
+    }
+  }
+}
+
+.active {
+  background-color: #304859 !important;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  height: 48px;
+  margin-top: 32px;
+
+  color: #fcfcfc;
+  font-size: 18px;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 26px;
+  background-color: #fda214;
+
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #ffb84a;
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 32px;
+    height: 70px;
+    border-radius: 35px;
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,15 @@
+@keyframes fade-in-bck {
+  0% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.container {
+  animation: fade-in-bck 0.6s 0.1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
